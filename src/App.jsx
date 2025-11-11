@@ -8,6 +8,7 @@ import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
+import { LineChart } from '@mui/x-charts/LineChart';
 
 function App() {
   const [luogo, setLuogo] = useState("");
@@ -41,7 +42,15 @@ function App() {
         <Item>size=4</Item>
       </Grid>
       <Grid size={8}>
-        <Item>size=8</Item>
+        <LineChart
+      xAxis={[{ data: [1, 2, 3, 5, 8, 10] }]}
+      series={[
+        {
+          data: [2, 5.5, 2, 8.5, 1.5, 5],
+        },
+      ]}
+      height={600}
+    />npm
       </Grid>
     </Grid>
   );
